@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ax Parts&amp;Paint — Piese și accesorii auto Săbăreni, Giurgiu</title>
+<link rel="icon" href="logo.webp">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Ax Parts&Paint — magazin de piese și accesorii auto, jante și anvelope, produse de detailing și consumabile pentru vopsitorie, Str. Castanilor 22, Săbăreni, jud. Giurgiu. Tel. 0722 314 897.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:ital,wdth,wght@0,75..125,400..900;1,75..125,400..900&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: workshop-dark single look from the logo — chrome display type, one red diagonal "stripe" motif, parts-counter grid, paint-code finder */
+:root{
+  --bg:#0a0a0b; --panel:#141416; --panel-2:#1b1b1e; --line:#2a2a2f;
+  --fg:#ecebea; --muted:#9d9ca3; --red:#e3161c; --red-dk:#a90e13; --steel:#c9cbd0;
+  --wa:#25d366;
+  --f-display:"Saira","Arial Narrow",Arial,sans-serif;
+  --f-body:"Barlow","Segoe UI",Roboto,Arial,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  --r:6px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.6 var(--f-body);margin:0;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-stretch:112%;line-height:1.02;margin:0;text-wrap:balance;letter-spacing:-.01em}
+.eyebrow{font:600 13px/1 var(--f-body);letter-spacing:.18em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:4px;background:var(--red);transform:skewX(-30deg)}
+.chrome{background:linear-gradient(180deg,#ffffff 0%,#d4d6db 45%,#8d9097 52%,#e6e7ea 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.red{color:var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 16px/1 var(--f-display);font-stretch:110%;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;border:0;cursor:pointer;padding:16px 22px;border-radius:var(--r);transition:transform .15s,background .15s,box-shadow .15s}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:2px solid var(--steel);outline-offset:3px}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 8px 24px -10px var(--red)}
+.btn-red:hover{background:#f2252b;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1.5px var(--line)}
+.btn-ghost:hover{box-shadow:inset 0 0 0 1.5px var(--steel)}
+.btn-wa{background:var(--wa);color:#05210f}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(10,10,11,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:8px}
+.top img{height:54px;width:auto;mix-blend-mode:lighten;display:block}
+.top nav{display:flex;gap:26px}
+.top nav a{text-decoration:none;font:600 15px var(--f-body);color:var(--muted);letter-spacing:.02em}
+.top nav a:hover{color:var(--fg)}
+.top .btn{padding:12px 16px;font-size:15px}
+@media (max-width:860px){.top nav{display:none}}
+@media (max-width:420px){.top .btn .lbl{display:none}.top img{height:46px}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero::after{content:"";position:absolute;right:-8%;bottom:-40px;width:60%;height:120px;background:repeating-linear-gradient(-60deg,transparent 0 22px,rgba(227,22,28,.10) 22px 30px);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-block:56px 72px;position:relative;z-index:1}
+.hero-logo{width:100%;max-width:560px;mix-blend-mode:lighten;display:block;margin:-10px 0 18px -14px}
+.hero h1{font-size:clamp(34px,5.2vw,62px);font-weight:800;font-style:italic;text-transform:uppercase}
+.hero p.lead{color:var(--muted);font-size:19px;max-width:52ch;margin:18px 0 28px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.phone-big{font:700 15px var(--f-mono);color:var(--steel);margin-top:18px;user-select:all}
+@media (max-width:920px){.hero .wrap{grid-template-columns:1fr;gap:36px;padding-block:28px 48px}.hero-logo{max-width:420px;margin-left:-10px}}
+
+/* request card */
+.card{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:10px;padding:26px;position:relative;min-width:0}
+.card::before{content:"";position:absolute;top:-1px;left:24px;width:90px;height:4px;background:var(--red);transform:skewX(-30deg)}
+.card h2{font-size:26px;font-style:italic;text-transform:uppercase;margin-bottom:6px}
+.card .sub{color:var(--muted);font-size:15px;margin:0 0 18px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fgrid .full{grid-column:1/-1}
+label{display:block;font:600 12px var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+input,select,textarea{width:100%;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:var(--r);padding:12px 13px;font:500 16px var(--f-body)}
+textarea{resize:vertical;min-height:70px}
+input::placeholder,textarea::placeholder{color:#5f5e66}
+.card .btn{width:100%;margin-top:16px}
+.out{margin-top:16px;border-top:1px dashed var(--line);padding-top:16px}
+.out pre{white-space:pre-wrap;font:500 13px/1.55 var(--f-mono);color:var(--steel);background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:12px;margin:0 0 12px}
+.out .row{display:flex;gap:10px;flex-wrap:wrap}
+.out .btn{width:auto;margin:0;flex:1 1 180px}
+.err{color:#ff7a7e;font-size:14px;margin-top:8px}
+@media (max-width:420px){.fgrid{grid-template-columns:1fr}}
+
+/* trust strip */
+.strip{border-bottom:1px solid var(--line);background:var(--panel)}
+.strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.strip div.item{padding:22px 20px;display:flex;gap:14px;align-items:flex-start;border-left:1px solid var(--line)}
+.strip div.item:first-child{border-left:0;padding-left:0}
+.strip b{font:700 17px var(--f-display);font-stretch:108%;display:block;text-transform:uppercase;letter-spacing:.02em}
+.strip span{color:var(--muted);font-size:15px}
+.strip svg{width:26px;height:26px;color:var(--red);flex:none;margin-top:2px}
+@media (max-width:820px){.strip .wrap{grid-template-columns:1fr}.strip div.item{border-left:0;border-top:1px solid var(--line);padding-left:0}.strip div.item:first-child{border-top:0}}
+
+section.s{padding-block:88px}
+.s-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.s-head h2{font-size:clamp(32px,4.4vw,52px);font-weight:800;font-style:italic;text-transform:uppercase;margin-top:12px}
+.s-head p{color:var(--muted);max-width:46ch;margin:0}
+
+/* categories */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.cat{background:var(--panel);padding:24px 22px 22px;display:flex;flex-direction:column;gap:8px;text-decoration:none;position:relative;transition:background .15s;min-width:0}
+.cat:hover{background:var(--panel-2)}
+.cat:hover .go{color:var(--red);transform:translateX(3px)}
+.cat .code{font:500 12px var(--f-mono);color:#6e6d75}
+.cat h3{font-size:21px;font-weight:700;text-transform:uppercase;font-stretch:105%}
+.cat p{color:var(--muted);font-size:14.5px;margin:0;line-height:1.5}
+.cat .go{margin-top:auto;padding-top:8px;font:600 13px var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--steel);transition:.15s}
+@media (max-width:980px){.cats{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.cats{grid-template-columns:1fr}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:st}
+.step{border-top:2px solid var(--line);padding-top:20px;position:relative}
+.step::before{counter-increment:st;content:counter(st);font:800 italic 56px/1 var(--f-display);font-stretch:120%;color:transparent;-webkit-text-stroke:1.5px var(--red);display:block;margin-bottom:10px}
+.step h3{font-size:22px;text-transform:uppercase;font-stretch:105%;margin-bottom:8px}
+.step p{color:var(--muted);margin:0;font-size:16px}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--panel);border-top:1px solid var(--line)}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:stretch}
+.cbox{border:1px solid var(--line);border-radius:10px;padding:28px;background:var(--bg);min-width:0}
+.cline{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.cline:last-of-type{border-bottom:0}
+.cline .k{font:600 12px var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.cline .v{font:600 19px var(--f-body);min-width:0;overflow-wrap:anywhere}
+.cline .v.mono{font:500 20px var(--f-mono);letter-spacing:.02em}
+.copy{margin-left:10px;font:600 12px var(--f-body);letter-spacing:.08em;text-transform:uppercase;background:none;border:1px solid var(--line);color:var(--steel);border-radius:4px;padding:4px 8px;cursor:pointer;vertical-align:middle}
+.copy:hover{border-color:var(--steel)}
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.socials a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border:1px solid var(--line);border-radius:var(--r);padding:10px 14px;font:600 15px var(--f-body)}
+.socials a:hover{border-color:var(--steel)}
+.socials svg{width:18px;height:18px}
+.mapcard{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;text-decoration:none;
+  background:
+   linear-gradient(180deg,rgba(10,10,11,.1),rgba(10,10,11,.92) 75%),
+   repeating-linear-gradient(0deg,transparent 0 38px,#1d1d21 38px 39px),
+   repeating-linear-gradient(90deg,transparent 0 38px,#1d1d21 38px 39px),
+   #121214}
+.mapcard::before{content:"";position:absolute;left:-10%;top:42%;width:130%;height:14px;background:#2a2a30;transform:rotate(-14deg)}
+.mapcard::after{content:"";position:absolute;left:55%;top:-10%;width:10px;height:130%;background:#24242a;transform:rotate(8deg)}
+.pin{position:absolute;left:calc(50% - 18px);top:30%;width:36px;height:36px;background:var(--red);border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 0 0 8px rgba(227,22,28,.18);z-index:1}
+.pin::after{content:"";position:absolute;inset:11px;background:var(--bg);border-radius:50%}
+.mapcard h3{font-size:26px;text-transform:uppercase;font-style:italic;position:relative;z-index:1}
+.mapcard p{position:relative;z-index:1;color:var(--muted);margin:6px 0 16px}
+.mapcard .btn{position:relative;z-index:1;align-self:flex-start}
+@media (max-width:920px){.contact-grid{grid-template-columns:1fr}}
+@media (max-width:480px){.cline{grid-template-columns:1fr;gap:4px}}
+
+footer{border-top:1px solid var(--line);padding-block:28px 96px;color:#75747b;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* mobile action bar */
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:55;background:rgba(10,10,11,.96);border-top:1px solid var(--line);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));gap:10px}
+.mbar .btn{flex:1;padding:14px 10px;font-size:15px}
+@media (max-width:720px){.mbar{display:flex}}
+
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);font:600 14px var(--f-body);padding:10px 16px;border-radius:var(--r);z-index:70}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a href="#acasa" aria-label="Ax Parts&amp;Paint — acasă"><img src="logo.webp" alt="Ax Parts&amp;Paint"></a>
+    <nav aria-label="Meniu">
+      <a href="#piese">Piese auto</a>
+      <a href="#comanda">Cum comanzi</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-red" href="tel:+40722314897"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span class="lbl">0722 314 897</span></a>
+  </div>
+</header>
+
+<main id="acasa">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <img class="hero-logo" src="logo.webp" alt="Ax Parts&amp;Paint — piese și accesorii auto">
+      <h1><span class="chrome">Piesa potrivită.</span><br><span class="red">Din prima.</span></h1>
+      <p class="lead">Magazin de piese și accesorii auto în Săbăreni, jud. Giurgiu. Spune-ne mașina și ce piesă îți trebuie, iar noi îți găsim varianta corectă. Ce nu avem pe stoc, aducem la comandă.</p>
+      <div class="ctas">
+        <a class="btn btn-red" href="#cerere">Cere ofertă piesă</a>
+        <a class="btn btn-wa" href="https://wa.me/40722314897" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>WhatsApp</a>
+      </div>
+      <div class="phone-big">TEL. 0722 314 897 · STR. CASTANILOR 22, SĂBĂRENI</div>
+    </div>
+
+    <form class="card" id="cerere" novalidate>
+      <h2>Caută piesa</h2>
+      <p class="sub">Completează datele mașinii. Primești mesajul gata scris pentru WhatsApp.</p>
+      <div class="fgrid">
+        <div><label for="f-marca">Marcă</label>
+          <select id="f-marca"><option value="">Alege marca</option></select></div>
+        <div><label for="f-model">Model</label>
+          <input id="f-model" placeholder="ex. Golf 6, Logan 2"></div>
+        <div><label for="f-an">An fabricație</label>
+          <input id="f-an" inputmode="numeric" maxlength="4" placeholder="ex. 2012"></div>
+        <div><label for="f-motor">Motorizare</label>
+          <input id="f-motor" placeholder="ex. 1.6 TDI, 1.5 dCi"></div>
+        <div class="full"><label for="f-piesa">Ce piesă cauți?</label>
+          <input id="f-piesa" placeholder="ex. kit distribuție, plăcuțe frână față"></div>
+        <div class="full"><label for="f-vin">Serie șasiu (VIN) — opțional</label>
+          <input id="f-vin" maxlength="17" placeholder="17 caractere, din talon (rubrica E)" style="font-family:var(--f-mono);text-transform:uppercase"></div>
+      </div>
+      <button class="btn btn-red" type="submit">Pregătește cererea</button>
+      <div class="err" id="f-err" hidden>Completează marca și piesa căutată, ca să știm ce să verificăm.</div>
+      <div class="out" id="f-out" hidden>
+        <pre id="f-msg"></pre>
+        <div class="row">
+          <a class="btn btn-wa" id="f-wa" href="https://wa.me/40722314897" target="_blank" rel="noopener">Trimite pe WhatsApp</a>
+          <button class="btn btn-ghost" type="button" id="f-copy">Copiază mesajul</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg><div><b>Piesa corectă din prima</b><span>Verificăm compatibilitatea după seria de șasiu.</span></div></div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg><div><b>Aducem la comandă</b><span>Ce nu e pe stoc, comandăm pentru mașina ta.</span></div></div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg><div><b>Comanzi pe WhatsApp</b><span>Trimite poza piesei sau a talonului și primești ofertă.</span></div></div>
+  </div>
+</div>
+
+<section class="s" id="piese">
+  <div class="wrap">
+    <div class="s-head">
+      <div><div class="eyebrow">Piese auto</div><h2><span class="chrome">Ce găsești</span> <span class="red">la noi</span></h2></div>
+      <p>Piese de întreținere și reparație pentru toate mărcile, plus accesorii, jante și anvelope, produse de detailing și consumabile pentru vopsitorie. Ce nu e pe stoc, aducem la comandă. Apasă pe o categorie ca să ceri ofertă direct.</p>
+    </div>
+    <div class="cats" id="cats"></div>
+  </div>
+</section>
+
+<section class="s" id="comanda">
+  <div class="wrap">
+    <div class="s-head">
+      <div><div class="eyebrow">Cum comanzi</div><h2><span class="chrome">Simplu,</span> <span class="red">în 3 pași</span></h2></div>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Ne spui ce-ți trebuie</h3><p>Suni, scrii pe WhatsApp sau completezi formularul de mai sus. Ajută mult o poză cu talonul sau cu piesa veche.</p></div>
+      <div class="step"><h3>Primești oferta</h3><p>Verificăm piesa potrivită pentru mașina ta și revenim cu prețul și disponibilitatea.</p></div>
+      <div class="step"><h3>O ridici din magazin</h3><p>Treci pe Str. Castanilor 22, Săbăreni, și iei piesa comandată.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s contact" id="contact">
+  <div class="wrap">
+    <div class="s-head">
+      <div><div class="eyebrow">Contact</div><h2><span class="chrome">Te așteptăm</span> <span class="red">la magazin</span></h2></div>
+    </div>
+    <div class="contact-grid">
+      <div class="cbox">
+        <div class="cline"><span class="k">Telefon</span><span class="v mono"><span id="c-tel">0722 314 897</span><button class="copy" type="button" data-copy="0722314897">Copiază</button></span></div>
+        <div class="cline"><span class="k">WhatsApp</span><span class="v"><a href="https://wa.me/40722314897" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a></span></div>
+        <div class="cline"><span class="k">Adresă</span><span class="v">Str. Castanilor 22, Săbăreni, jud. Giurgiu</span></div>
+        <div class="socials">
+          <a href="https://www.facebook.com/share/1C83jsjDet/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg>Facebook</a>
+          <a href="https://www.tiktok.com/@axpartspieseauto" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 2h-3.3v13.2a2.9 2.9 0 1 1-2-2.8V9a6.2 6.2 0 1 0 5.3 6.2V8.4a7.6 7.6 0 0 0 4.4 1.4V6.5a4.4 4.4 0 0 1-4.4-4.5z"/></svg>@axpartspieseauto</a>
+        </div>
+      </div>
+      <a class="mapcard" href="https://www.google.com/maps/search/?api=1&amp;query=Strada+Castanilor+22+S%C4%83b%C4%83reni+Giurgiu" target="_blank" rel="noopener">
+        <span class="pin" aria-hidden="true"></span>
+        <h3>Ax Parts&amp;Paint</h3>
+        <p>Str. Castanilor 22, Săbăreni, jud. Giurgiu</p>
+        <span class="btn btn-red">Deschide în Google Maps</span>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Ax Parts&amp;Paint · Piese și accesorii auto · Săbăreni, jud. Giurgiu</span>
+    <span>Tel. 0722 314 897</span>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-red" href="tel:+40722314897">Sună</a>
+  <a class="btn btn-wa" href="https://wa.me/40722314897" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(function(){
+  var WA='40722314897';
+  var brands=['Audi','BMW','Citroën','Dacia','Fiat','Ford','Honda','Hyundai','Kia','Mazda','Mercedes-Benz','Nissan','Opel','Peugeot','Renault','Seat','Skoda','Suzuki','Toyota','Volkswagen','Volvo','Altă marcă'];
+  var sel=document.getElementById('f-marca');
+  brands.forEach(function(b){var o=document.createElement('option');o.value=b;o.textContent=b;sel.appendChild(o);});
+
+  var cats=[
+    ['FR','Frânare','Plăcuțe, discuri, saboți, etriere, lichid de frână.'],
+    ['FL','Filtre și uleiuri','Filtre de ulei, aer, polen, combustibil. Ulei de motor.'],
+    ['DS','Distribuție','Kit distribuție, pompă de apă, curea accesorii, întinzătoare.'],
+    ['AM','Ambreiaj','Kit ambreiaj, volantă, rulment de presiune.'],
+    ['SP','Suspensie și direcție','Amortizoare, arcuri, brațe, bieletă, capete de bară.'],
+    ['JA','Jante și anvelope','Anvelope de vară, iarnă și all-season, jante din aliaj și tablă.'],
+    ['AC','Accesorii auto','Covorașe, huse, ștergătoare, odorizante, cabluri de pornire.'],
+    ['DT','Produse detailing','Șampoane auto, ceară, polish, soluții pentru interior, lavete microfibră.'],
+    ['VP','Consumabile vopsitorie','Chituri, grunduri, abrazive, bandă de mascare, folii de protecție.'],
+    ['EL','Electrice și baterii','Baterii, bujii, bobine, senzori, alternatoare, electromotoare.'],
+    ['RC','Răcire și climă','Radiatoare, termostate, furtunuri, antigel.'],
+    ['CR','Caroserie și iluminat','Faruri, stopuri, oglinzi, bări, aripi, becuri.']
+  ];
+  var cw=document.getElementById('cats');
+  cats.forEach(function(c){
+    var a=document.createElement('a');a.className='cat';a.href='#cerere';
+    a.innerHTML='<span class="code">'+c[0]+'</span><h3>'+c[1]+'</h3><p>'+c[2]+'</p><span class="go">Cere ofertă →</span>';
+    a.addEventListener('click',function(){var p=document.getElementById('f-piesa');p.value=c[1]+': ';setTimeout(function(){p.focus();},400);});
+    cw.appendChild(a);
+  });
+
+  var form=document.getElementById('cerere'),err=document.getElementById('f-err'),out=document.getElementById('f-out'),msgEl=document.getElementById('f-msg'),wa=document.getElementById('f-wa');
+  var v=function(id){return document.getElementById(id).value.trim();};
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!v('f-marca')||!v('f-piesa')){err.hidden=false;out.hidden=true;return;}
+    err.hidden=true;
+    var lines=['Salut! Caut o piesă:','Mașina: '+[v('f-marca'),v('f-model')].filter(Boolean).join(' ')];
+    if(v('f-an'))lines.push('An: '+v('f-an'));
+    if(v('f-motor'))lines.push('Motorizare: '+v('f-motor'));
+    if(v('f-vin'))lines.push('Serie șasiu: '+v('f-vin').toUpperCase());
+    lines.push('Piesa: '+v('f-piesa'));
+    var m=lines.join('\n');
+    msgEl.textContent=m;
+    wa.href='https://wa.me/'+WA+'?text='+encodeURIComponent(m);
+    out.hidden=false;
+  });
+
+  function toast(t){var el=document.getElementById('toast');el.textContent=t;el.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(function(){el.hidden=true;},1800);}
+  function copy(text,fallbackEl){
+    var done=function(){toast('Copiat');};
+    var fb=function(){if(fallbackEl){var r=document.createRange();r.selectNodeContents(fallbackEl);var s=getSelection();s.removeAllRanges();s.addRange(r);toast('Selectat — apasă Copiază');}};
+    try{navigator.clipboard.writeText(text).then(done,fb);}catch(e){fb();}
+  }
+  document.getElementById('f-copy').addEventListener('click',function(){copy(msgEl.textContent,msgEl);});
+  document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){copy(b.getAttribute('data-copy'),document.getElementById('c-tel'));});});
+
+  try{document.getElementById('yr').textContent=new Date().getFullYear();}catch(e){}
+})();
+</script>
+
+</body>
+</html>
